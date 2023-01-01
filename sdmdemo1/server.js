@@ -1,9 +1,9 @@
 var express= require("express");
 const app=express();
 var bodyparse=require("body-parser");
-
+var path=require("path");
 app.get("/",function(req,resp){
-    resp.sendFile("index.html",{__dirname});
+    resp.sendFile(path.join(__dirname,"./public/index.html",));
 });
 
 app.listen(5000);
